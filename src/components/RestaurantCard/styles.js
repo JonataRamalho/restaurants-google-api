@@ -42,5 +42,4 @@ export const RestaurantPhoto = styled.img`
   height: 100px;
   object-fit: cover;
   border-radius: 6px;
-  //Parou Dev de componentes - parte: 07:11
 `;
