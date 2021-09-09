@@ -8,7 +8,16 @@ import logo from '../../assets/logo.svg';
 import restaurante from '../../assets/restaurante-fake.png';
 import { Card, RestaurantCard, Modal, Map } from '../../components';
 
-import { Container, Carousel, Search, Logo, Wrapper, CarouselTitle, ModalTitle } from './styles';
+import {
+  Container,
+  Carousel,
+  Search,
+  Logo,
+  Wrapper,
+  CarouselTitle,
+  ModalTitle,
+  ModalContent,
+} from './styles';
 
 const Home = () => {
   const [inputValue, setInputValue] = useState('');
@@ -20,6 +29,7 @@ const Home = () => {
   const settings = {
     dots: false,
     infinite: true,
+    autoplay: true,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -73,8 +83,13 @@ const Home = () => {
       <Map query={query} placeId={placeId} />
       <Modal open={modalOpened} onClose={() => setModalOpened(!modalOpened)}>
         <ModalTitle>{restaurantSelected?.name}</ModalTitle>
-        <p>{restaurantSelected?.formatted_phone_number}</p>
-        <p>{restaurantSelected?.formatted_address}</p>
+        <ModalContent>{restaurantSelected?.formatted_phone_number}</ModalContent>
+        <ModalContent>{restaurantSelected?.formatted_address}</ModalContent>
+        <ModalContent>
+          {restaurantSelected?.opening_hours?.open_now
+            ? 'Aberto agora :-)'
+            : 'Fechado neste momento :-('}
+        </ModalContent>
       </Modal>
     </Wrapper>
   );
