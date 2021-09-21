@@ -51,3 +51,16 @@ $ yarn start
 <br/>
 
 # :iphone: Layout
+
+<p align="center">
+    <img alt="Tela da aplicação" src=".github/restaurant1.png" />&nbsp;&nbsp;&nbsp;
+    <br/>
+    <br/>
+    <img alt="Tela da aplicação" src=".github/restaurant2.png" />
+    <br/>
+    <br/>
+    <img alt="Tela da aplicação" src=".github/restaurant3.png" />
+    <br/>
+    <br/>
+    <img alt="Tela da aplicação" src=".github/restaurant4.png" />
+</p>
